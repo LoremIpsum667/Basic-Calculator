@@ -1,0 +1,68 @@
+/* font */
+@font-face {
+  font-family: Roboto;
+  src: url(/assets/font/Roboto.ttf);
+}
+*{
+  color: white;
+}
+/* title */
+h1,h4{
+    text-align: center;
+}
+h4{
+  margin-bottom: 10rem;
+}
+/* calculator initials settings */
+.app {
+  display: grid;
+  width: 300px;
+  margin: 0 auto;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 50px repeat(5, 30px);
+  grid-template-areas:
+    "res res res res"
+    "7 8 9 reset"
+    "4 5 6 reset"
+    "1 2 3 reset"
+    "0 dot plus minus"
+    "equal equal times div";
+  border: 2px solid #9b27af;
+  border-radius: 4px;
+}
+/* result settings */
+h3 {
+  text-align: right;
+  margin: 7px 10px 0 0;
+  font-size: 2rem;
+  grid-area: res;
+}
+/* buttons style */
+button {
+  background-color: #9b27af;
+  color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+button:hover {
+  background: #cf5ce2;
+}
+#equal {
+  grid-area: equal;
+}
+#clear {
+    grid-area: reset;
+}
+/* credits */
+p{
+  text-align: center;
+}
+/* background */
+body{
+  background-image: url("/assets/img/7.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+}
